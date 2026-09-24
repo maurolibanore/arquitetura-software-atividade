@@ -75,17 +75,17 @@ app.get("/pedidos", async (req, res) => {
 });*/
 
 app.post("/pedidos", async (req, res) => {
-    const { produtoId, cliente_id, quantidade } = req.body;
+    const { produto_id, cliente_id, quantidade } = req.body;
 
-    if (!produtoId || !cliente_id || !quantidade || quantidade <= 0) {
+    if (!produto_id || !cliente_id || !quantidade || quantidade <= 0) {
         return res.status(400).json({
-            erro: "produtoId e quantidade válida são obrigatórios"
+            erro: "produto_id e quantidade válida são obrigatórios"
         });
     }
 
     try {
         const resposta = await axios.get(
-            `${PRODUTOS_URL}/produtos/${produtoId}`,
+            `${PRODUTOS_URL}/produtos/${produto_id}`,
             {
                 timeout: 3000
             }

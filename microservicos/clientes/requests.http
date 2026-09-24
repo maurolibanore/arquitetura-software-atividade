@@ -1,0 +1,111 @@
+### Criar cliente
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+  "nome": "João",
+  "sobrenome": "Silva",
+  "telefone": "46999999999",
+  "email": "joao@email.com"
+}
+
+### Criar cliente
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+  "nome": "Maria",
+  "sobrenome": "Souza",
+  "telefone": "46988888888",
+  "email": "maria@email.com"
+}
+
+### Criar cliente
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+  "nome": "Carlos",
+  "sobrenome": "Oliveira",
+  "telefone": "46991112222",
+  "email": "carlos@email.com"
+}
+
+### Criar cliente
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+  "nome": "Bruna",
+  "sobrenome": "Lima",
+  "telefone": "46993334444",
+  "email": "bruna@email.com"
+}
+
+### Criar cliente
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+  "nome": "Diego",
+  "sobrenome": "Costa",
+  "telefone": "46995556666",
+  "email": "diego@email.com"
+}
+
+### Listar clientes
+GET http://localhost:3000/clientes
+
+### Buscar cliente por id
+GET http://localhost:3000/clientes/2
+
+### E-mail repetido 409
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+  "nome": "Outro",
+  "sobrenome": "Silva",
+  "email": "joao@email.com"
+}
+
+### Faltando sobrenome 400
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+  "nome": "Ana",
+  "email": "ana@email.com"
+}
+
+### Buscar id inexistente 404
+GET http://localhost:3000/clientes/999
+
+### Criar produto 
+POST http://localhost:3000/produtos
+Content-Type: application/json
+
+{
+  "nome": "Teclado",
+  "preco": 150
+}
+
+### Criar pedido com cliente valido 
+POST http://localhost:3000/pedidos
+Content-Type: application/json
+
+{
+  "produtoId": 1,
+  "cliente_id": 1,
+  "quantidade": 2
+}
+
+### Criar pedido com cliente inexistente 400
+POST http://localhost:3000/pedidos
+Content-Type: application/json
+
+{
+  "produtoId": 1,
+  "cliente_id": 999,
+  "quantidade": 1
+}
