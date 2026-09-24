@@ -57,7 +57,7 @@ Content-Type: application/json
 GET http://localhost:3000/clientes
 
 ### Buscar cliente por id
-GET http://localhost:3000/clientes/2
+GET http://localhost:3000/clientes/3
 
 ### E-mail repetido 409
 POST http://localhost:3000/clientes
@@ -95,7 +95,7 @@ POST http://localhost:3000/pedidos
 Content-Type: application/json
 
 {
-  "produtoId": 1,
+  "produto_id": 1,
   "cliente_id": 1,
   "quantidade": 2
 }
@@ -105,7 +105,7 @@ POST http://localhost:3000/pedidos
 Content-Type: application/json
 
 {
-  "produtoId": 1,
+  "produto_id": 1,
   "cliente_id": 999,
   "quantidade": 1
 }
